@@ -13,6 +13,8 @@
 		793C7C411B1DEC4C00EB756E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 793C7C401B1DEC4C00EB756E /* Images.xcassets */; };
 		793C7C441B1DEC4C00EB756E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 793C7C421B1DEC4C00EB756E /* LaunchScreen.xib */; };
 		793C7C501B1DEC4C00EB756E /* ios_bijlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C7C4F1B1DEC4C00EB756E /* ios_bijlesTests.swift */; };
+		796E65B01B1DF2E6008420AD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E65AF1B1DF2E6008420AD /* SearchViewController.swift */; };
+		93B9225AC9E53F662441554A /* libPods-ios-bijles.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF4038B598DE010003A55476 /* libPods-ios-bijles.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20414CBB2E07C678FF2B7823 /* Pods-ios-bijles.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-bijles.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-bijles/Pods-ios-bijles.release.xcconfig"; sourceTree = "<group>"; };
 		793C7C341B1DEC4C00EB756E /* ios-bijles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-bijles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		793C7C381B1DEC4C00EB756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		793C7C391B1DEC4C00EB756E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,10 @@
 		793C7C491B1DEC4C00EB756E /* ios-bijlesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-bijlesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		793C7C4E1B1DEC4C00EB756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		793C7C4F1B1DEC4C00EB756E /* ios_bijlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_bijlesTests.swift; sourceTree = "<group>"; };
+		796E65AB1B1DEE7D008420AD /* ios-bijles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-bijles-Bridging-Header.h"; sourceTree = "<group>"; };
+		796E65AF1B1DF2E6008420AD /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BF4038B598DE010003A55476 /* libPods-ios-bijles.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-bijles.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8158E10947D526056EB7002 /* Pods-ios-bijles.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-bijles.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-bijles/Pods-ios-bijles.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B9225AC9E53F662441554A /* libPods-ios-bijles.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +70,8 @@
 				793C7C361B1DEC4C00EB756E /* ios-bijles */,
 				793C7C4C1B1DEC4C00EB756E /* ios-bijlesTests */,
 				793C7C351B1DEC4C00EB756E /* Products */,
+				824A1384F612BDB02E518490 /* Pods */,
+				C1E4178E1092EA9EF76CB0E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +92,7 @@
 				793C7C3D1B1DEC4C00EB756E /* Main.storyboard */,
 				793C7C401B1DEC4C00EB756E /* Images.xcassets */,
 				793C7C421B1DEC4C00EB756E /* LaunchScreen.xib */,
+				796E65AF1B1DF2E6008420AD /* SearchViewController.swift */,
 				793C7C371B1DEC4C00EB756E /* Supporting Files */,
 			);
 			path = "ios-bijles";
@@ -90,6 +101,7 @@
 		793C7C371B1DEC4C00EB756E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				796E65AB1B1DEE7D008420AD /* ios-bijles-Bridging-Header.h */,
 				793C7C381B1DEC4C00EB756E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -112,6 +124,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		824A1384F612BDB02E518490 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8158E10947D526056EB7002 /* Pods-ios-bijles.debug.xcconfig */,
+				20414CBB2E07C678FF2B7823 /* Pods-ios-bijles.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C1E4178E1092EA9EF76CB0E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF4038B598DE010003A55476 /* libPods-ios-bijles.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 793C7C531B1DEC4C00EB756E /* Build configuration list for PBXNativeTarget "ios-bijles" */;
 			buildPhases = (
+				E36E044D19F7764A34C859D6 /* Check Pods Manifest.lock */,
 				793C7C301B1DEC4C00EB756E /* Sources */,
 				793C7C311B1DEC4C00EB756E /* Frameworks */,
 				793C7C321B1DEC4C00EB756E /* Resources */,
+				641AD0EC8EEB79146A89BD2C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,11 +238,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		641AD0EC8EEB79146A89BD2C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-bijles/Pods-ios-bijles-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E36E044D19F7764A34C859D6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		793C7C301B1DEC4C00EB756E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796E65B01B1DF2E6008420AD /* SearchViewController.swift in Sources */,
 				793C7C3C1B1DEC4C00EB756E /* ViewController.swift in Sources */,
 				793C7C3A1B1DEC4C00EB756E /* AppDelegate.swift in Sources */,
 			);
@@ -338,21 +403,28 @@
 		};
 		793C7C541B1DEC4C00EB756E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8158E10947D526056EB7002 /* Pods-ios-bijles.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "ios-bijles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-bijles/ios-bijles-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		793C7C551B1DEC4C00EB756E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20414CBB2E07C678FF2B7823 /* Pods-ios-bijles.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "ios-bijles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios-bijles/ios-bijles-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +481,7 @@
 				793C7C551B1DEC4C00EB756E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		793C7C561B1DEC4C00EB756E /* Build configuration list for PBXNativeTarget "ios-bijlesTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +490,7 @@
 				793C7C581B1DEC4C00EB756E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
