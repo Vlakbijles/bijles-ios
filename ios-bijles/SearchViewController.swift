@@ -10,6 +10,9 @@ import UIKit
 
 class SearchViewController: XLFormViewController {
     
+    let niveaus: [String] = ["vmbo", "havo", "vwo", "hbo", "wo"]
+    let vakken: [String] = ["Nederlands", "Duits", "Engels"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadForm()
@@ -21,21 +24,39 @@ class SearchViewController: XLFormViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func loadForm() {
-        let dateTime = "dateTime"
-        let date = "date"
-        let time = "time"
         
+    func loadForm() {
+    
         var form : XLFormDescriptor
         var section : XLFormSectionDescriptor
         var row : XLFormRowDescriptor
         
-        form = XLFormDescriptor(title: "Dates") as XLFormDescriptor
+        form = XLFormDescriptor(title: "Search") as XLFormDescriptor
         
-        section = XLFormSectionDescriptor.formSectionWithTitle("Inline Dates") as XLFormSectionDescriptor
+        section = XLFormSectionDescriptor.formSectionWithTitle("Zoektermen") as XLFormSectionDescriptor
         form.addFormSection(section)
         
+        // Postcode
+        row = XLFormRowDescriptor(tag: "entry1", rowType: XLFormRowDescriptorTypeText, title: "Postcode")
+        row.required = true
+        section.addFormRow(row)
+        
+        // Niveau
+        row = XLFormRowDescriptor(tag: "entry2", rowType:XLFormRowDescriptorTypeSelectorPickerView, title:"Niveau")
+        row.selectorOptions = niveaus
+        row.value = niveaus[0]
+        section.addFormRow(row)
+        
+        // Vak / Studie
+        row = XLFormRowDescriptor(tag: "entry3", rowType:XLFormRowDescriptorTypeSelectorPickerView, title:"Vak / Opleiding")
+        row.selectorOptions = vakken
+        row.value = vakken[0]
+        section.addFormRow(row)
+        
+        // Done
+        row = XLFormRowDescriptor(tag: "donebutton",
+            rowType:XLFormRowDescriptorTypeButton, title:"Zoek!")
+        section.addFormRow(row)
 
         
         self.form = form;
