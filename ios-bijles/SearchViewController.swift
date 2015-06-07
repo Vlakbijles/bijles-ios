@@ -10,16 +10,21 @@ import UIKit
 
 class SearchViewController: XLFormViewController {
     
+    let adressen: [String] = ["test", "test2","test3"]
     let niveaus: [String] = ["vmbo", "havo", "vwo", "hbo", "wo"]
     let vakken: [String] = ["Nederlands", "Duits", "Engels"]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadForm()
         
-        // Do any additional setup after loading the view.
+          // Do any additional setup after loading the view.
     }
 
+    @IBAction func unwindToSearchViewController(segue: UIStoryboardSegue) {
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,14 +36,14 @@ class SearchViewController: XLFormViewController {
         var section : XLFormSectionDescriptor
         var row : XLFormRowDescriptor
         
-        form = XLFormDescriptor(title: "Search") as XLFormDescriptor
+        form = XLFormDescriptor(title: "searchform") as XLFormDescriptor
         
         section = XLFormSectionDescriptor.formSectionWithTitle("Zoektermen") as XLFormSectionDescriptor
         form.addFormSection(section)
         
-        // Postcode
-        row = XLFormRowDescriptor(tag: "entry1", rowType: XLFormRowDescriptorTypeText, title: "Postcode")
-        row.required = true
+        // Adres
+        row = XLFormRowDescriptor(tag: "entry1", rowType:XLFormRowDescriptorTypeSelectorPush, title: "Adres")
+        row.action.viewControllerStoryboardId = "MapViewController"
         section.addFormRow(row)
         
         // Niveau
@@ -54,23 +59,15 @@ class SearchViewController: XLFormViewController {
         section.addFormRow(row)
         
         // Done
-        row = XLFormRowDescriptor(tag: "donebutton",
-            rowType:XLFormRowDescriptorTypeButton, title:"Zoek!")
+        row = XLFormRowDescriptor(tag: "donebutton", rowType:XLFormRowDescriptorTypeButton, title:"Zoek!")
+        row.action.viewControllerStoryboardId = "ResultsViewController"
         section.addFormRow(row)
 
         
         self.form = form;
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func storyboardForRow(formRow: XLFormRowDescriptor!) -> UIStoryboard! {
+        return UIStoryboard(name: "Main", bundle:nil)
     }
-    */
-
 }

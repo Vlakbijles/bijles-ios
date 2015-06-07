@@ -10,8 +10,12 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BIJLES ZOEKER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjV-ZD-1U8">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIJLES ZOEKER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjV-ZD-1U8">
                     <rect key="frame" x="97" y="239" width="406" height="122"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="122" id="K7Z-4a-AWO"/>
+                        <constraint firstAttribute="width" constant="406" id="zvy-FF-Qy6"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="36"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -19,8 +23,8 @@
             </subviews>
             <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerX" secondItem="XjV-ZD-1U8" secondAttribute="centerX" id="M1O-8S-5te"/>
-                <constraint firstAttribute="centerY" secondItem="XjV-ZD-1U8" secondAttribute="centerY" constant="239" id="pzJ-ot-0pY"/>
+                <constraint firstAttribute="centerY" secondItem="XjV-ZD-1U8" secondAttribute="centerY" id="SCb-af-SPm"/>
+                <constraint firstAttribute="centerX" secondItem="XjV-ZD-1U8" secondAttribute="centerX" id="mMG-88-lA4"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

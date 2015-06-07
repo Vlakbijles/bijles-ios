@@ -1,25 +1,38 @@
 //
 //  ViewController.swift
-//  ios-bijles
+//  GooglePlacesAutocompleteExample
 //
-//  Created by Tycho van der Ouderaa on 02/06/15.
-//  Copyright (c) 2015 Suftwear. All rights reserved.
+//  Created by Howard Wilson on 15/02/2015.
+//  Copyright (c) 2015 Howard Wilson. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
+  let gpaViewController = GooglePlacesAutocomplete(
+    apiKey: "AIzaSyCLOLxBlwzbaqi1FvyyYGuNy2-v7-Wu0Bw",
+    placeType: .Address
+  )
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    gpaViewController.placeDelegate = self
 
-
+    presentViewController(gpaViewController, animated: true, completion: nil)
+  }
 }
 
+extension ViewController: GooglePlacesAutocompleteDelegate {
+  func placeSelected(place: Place) {
+    println(place.description)
+
+    place.getDetails { details in
+      println(details)
+    }
+  }
+
+  func placeViewClosed() {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+}

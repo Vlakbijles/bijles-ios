@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  ios-bijles
+//  asdf
 //
-//  Created by Tycho van der Ouderaa on 02/06/15.
+//  Created by Tycho van der Ouderaa on 04/06/15.
 //  Copyright (c) 2015 Suftwear. All rights reserved.
 //
 
@@ -12,13 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    var didFinishLaunching: (Void -> Void)? = nil
-    
+
+
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
-        didFinishLaunching?()
-        
         // Override point for customization after application launch.
         return true
     }
