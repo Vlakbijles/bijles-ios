@@ -10,9 +10,11 @@ import UIKit
 
 class ResultsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var resultImage: UIImageView!
-    @IBOutlet weak var resultTitle: UILabel!
-    @IBOutlet weak var resultDescription: UILabel!
+    @IBOutlet var resultImage: UIImageView!
+    @IBOutlet var resultTitle: UILabel!
+    @IBOutlet var resultDescription: UILabel!
+    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()

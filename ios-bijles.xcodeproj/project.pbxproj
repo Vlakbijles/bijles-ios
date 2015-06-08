@@ -13,6 +13,7 @@
 		793C7C411B1DEC4C00EB756E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 793C7C401B1DEC4C00EB756E /* Images.xcassets */; };
 		793C7C441B1DEC4C00EB756E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 793C7C421B1DEC4C00EB756E /* LaunchScreen.xib */; };
 		793C7C501B1DEC4C00EB756E /* ios_bijlesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793C7C4F1B1DEC4C00EB756E /* ios_bijlesTests.swift */; };
+		793F56F61B2576D30063E67E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793F56F51B2576D30063E67E /* ProfileViewController.swift */; };
 		796E65B01B1DF2E6008420AD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E65AF1B1DF2E6008420AD /* SearchViewController.swift */; };
 		79A03A241B208E370054C257 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A03A231B208E370054C257 /* MapViewController.swift */; };
 		79A235331B24F1D700B223D3 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A235321B24F1D700B223D3 /* ResultsViewController.swift */; };
@@ -45,6 +46,7 @@
 		793C7C491B1DEC4C00EB756E /* ios-bijlesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-bijlesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		793C7C4E1B1DEC4C00EB756E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		793C7C4F1B1DEC4C00EB756E /* ios_bijlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_bijlesTests.swift; sourceTree = "<group>"; };
+		793F56F51B2576D30063E67E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		796E65AB1B1DEE7D008420AD /* ios-bijles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios-bijles-Bridging-Header.h"; sourceTree = "<group>"; };
 		796E65AF1B1DF2E6008420AD /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		79A03A231B208E370054C257 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		793C7C361B1DEC4C00EB756E /* ios-bijles */ = {
 			isa = PBXGroup;
 			children = (
+				793F56F41B2576BA0063E67E /* Profile */,
 				79A235371B24F4C500B223D3 /* Search */,
 				79A235361B24F4BC00B223D3 /* Results */,
 				79BF6E231B20B418008E17E0 /* ViewController.swift */,
@@ -138,11 +141,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		793F56F41B2576BA0063E67E /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				793F56F51B2576D30063E67E /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		79A235361B24F4BC00B223D3 /* Results */ = {
 			isa = PBXGroup;
 			children = (
-				79A235321B24F1D700B223D3 /* ResultsViewController.swift */,
 				79A235341B24F44800B223D3 /* face_example.jpg */,
+				79A235321B24F1D700B223D3 /* ResultsViewController.swift */,
 				79A235381B24F56C00B223D3 /* ResultsTableViewCell.swift */,
 			);
 			name = Results;
@@ -320,6 +331,7 @@
 				79A03A241B208E370054C257 /* MapViewController.swift in Sources */,
 				79BF6E241B20B418008E17E0 /* ViewController.swift in Sources */,
 				793C7C3A1B1DEC4C00EB756E /* AppDelegate.swift in Sources */,
+				793F56F61B2576D30063E67E /* ProfileViewController.swift in Sources */,
 				79A235331B24F1D700B223D3 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

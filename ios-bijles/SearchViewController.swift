@@ -7,19 +7,64 @@
 //
 
 import UIKit
+import CoreLocation
 
-class SearchViewController: XLFormViewController {
+
+class SearchViewController: XLFormViewController, CLLocationManagerDelegate
+ {
     
+    // Form
     let adressen: [String] = ["test", "test2","test3"]
     let niveaus: [String] = ["vmbo", "havo", "vwo", "hbo", "wo"]
     let vakken: [String] = ["Nederlands", "Duits", "Engels"]
     
+    // Location
+    let locationManager = CLLocationManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadForm()
         
-          // Do any additional setup after loading the view.
+        // Location
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
+        
+        
+        
+        // Form
+        self.loadForm()
     }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in
+                if (error != nil) {
+                    println("Error:" + error.localizedDescription)
+                    return
+                }
+            if placemarks.count > 0 {
+                let pm = placemarks[0] as! CLPlacemark
+                self.displayLocationInfo(pm)
+            } else {
+                println("Error with data")
+            }
+        })
+    }
+    func displayLocationInfo(placemark: CLPlacemark) {
+        self.locationManager.stopUpdatingLocation()
+        
+        println(placemark.locality)
+        println(placemark.postalCode)
+        println(placemark.administrativeArea)
+        println(placemark.country)
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        println("Error: " + error.localizedDescription)
+    }
+
+
+    
 
     @IBAction func unwindToSearchViewController(segue: UIStoryboardSegue) {
     }
@@ -27,7 +72,6 @@ class SearchViewController: XLFormViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
         
     func loadForm() {
