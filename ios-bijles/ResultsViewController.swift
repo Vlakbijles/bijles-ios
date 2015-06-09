@@ -11,8 +11,6 @@ import UIKit
 class ResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
-    // MARK: Instance Variables
-    
     @IBOutlet weak var tableView: UITableView!
 
     let cellIdentifier = "resultIdentifier"
@@ -66,12 +64,10 @@ class ResultsViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: UITableViewDataSource
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println("test")
         return items.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        println("test2")
         return resultCellAtIndexPath(indexPath)
     }
     
